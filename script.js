@@ -480,8 +480,52 @@ class OutfitChicApp {
         this.setActiveFilter('all');
     }
 
+    // Article click handlers
+    setupArticleNavigation() {
+        // Handle article card clicks
+        document.querySelectorAll('.article-card').forEach(article => {
+            article.addEventListener('click', (e) => {
+                const articleId = article.dataset.articleId;
+                console.log(`Navigating to article ${articleId}`);
+                this.navigateToArticle(articleId);
+            });
+        });
+
+        // Handle article title clicks specifically
+        document.querySelectorAll('.article-title').forEach(title => {
+            title.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const article = title.closest('.article-card');
+                const articleId = article.dataset.articleId;
+                console.log(`Navigating to article ${articleId} from title`);
+                this.navigateToArticle(articleId);
+            });
+        });
+    }
+
+    // Navigate to specific article
+    navigateToArticle(articleId) {
+        const articleUrls = {
+            'article-1': 'milan-fashion-week-best-looks.html',
+            'article-2': 'spring-beauty-trends-2025.html',
+            'article-3': 'minimalist-wardrobe-essentials.html',
+            'article-4': 'paris-fashion-week-highlights.html',
+            'article-5': 'winter-skincare-routine.html',
+            'article-6': 'cozy-home-decor-ideas.html'
+        };
+
+        if (articleUrls[articleId]) {
+            window.location.href = articleUrls[articleId];
+        } else {
+            console.warn(`Article ${articleId} not found`);
+        }
+    }
+
     // Add event listeners
     addEventListeners() {
+        // Setup article navigation
+        this.setupArticleNavigation();
+        
         // Add touch feedback for better mobile experience
         document.addEventListener('touchstart', () => {}, {passive: true});
         
