@@ -839,65 +839,200 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Initialize app when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    console.log(`🚀 DOM loaded - initializing OutfitChic app...`);
+// GLOBAL ARTICLE NAVIGATION - MOBILE OPTIMIZED
+function navigateToArticle(articleId) {
+    console.log(`🚀 Direct navigation to article: ${articleId}`);
     
-    // Initialize the OutfitChic app
-    window.outfitChicApp = new OutfitChicApp();
-    
-    // Add smooth scrolling for better UX
-    document.documentElement.style.scrollBehavior = 'smooth';
-    
-    // Add intersection observer for card animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+    const articleData = {
+        'article-1': {
+            title: 'Milan Fashion Week: I Look Più Iconici',
+            date: '15 Ottobre 2024',
+            readTime: '5 min di lettura',
+            image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=400&fit=crop&auto=format',
+            content: `
+                <h2>Le Tendenze Dominanti</h2>
+                <p>La Milano Fashion Week 2024 ha regalato momenti indimenticabili, con designer che hanno saputo ridefinire l'eleganza contemporanea attraverso collezioni audaci e sofisticate.</p>
+                
+                <p>Questa edizione è stata caratterizzata da un ritorno alle forme architettoniche, con capi che esaltano la silhouette femminile attraverso tagli precisi e materiali innovativi.</p>
+                
+                <h3>Colori e Tessuti</h3>
+                <ul>
+                    <li><strong>Neutri Eleganti:</strong> Beige, grigi perla e neri profondi hanno dominato le passerelle</li>
+                    <li><strong>Tessuti Tecnici:</strong> Materiali high-tech che uniscono comfort e lusso</li>
+                    <li><strong>Texture Ricche:</strong> Velluto, seta e pelle trattata in modo innovativo</li>
+                </ul>
+                
+                <h2>I Designer da Non Perdere</h2>
+                <p>Alcuni nomi hanno saputo distinguersi con proposte particolarmente innovative, mescolando tradizione italiana e visione futuristica.</p>
+                
+                <h3>Punti Salienti delle Collezioni</h3>
+                <p>Le passerelle hanno mostrato una precisa direzione verso capi versatili che possono easily transition dal daywear all'evening wear, dimostrando come la moda contemporanea sia sempre più orientata alla sostenibilità e alla praticità.</p>
+                
+                <blockquote>
+                    "La moda non è solo about estetica, ma about empowerment e self-expression"
+                </blockquote>
+                
+                <h2>Come Integrare Queste Tendenze</h2>
+                <p>Per chi desidera catturare lo spirito della Milano Fashion Week nel proprio guardaroba, le chiavi sono:</p>
+                <ol>
+                    <li><strong>Investire in capi strutturati</strong> che esaltano la figura</li>
+                    <li><strong>Scegliere tessuti di qualità</strong> che durano nel tempo</li>
+                    <li><strong>Mixare textures</strong> per creare look interessanti</li>
+                    <li><strong>Focus sui dettagli</strong> come bottoni, cuciture e proporzioni</li>
+                </ol>
+            `
+        },
+        'article-2': {
+            title: 'Spring Beauty Trends 2025: Le Novità Più Attese',
+            date: '20 Novembre 2024',
+            readTime: '6 min di lettura',
+            image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=400&fit=crop&auto=format',
+            content: `
+                <h2>Il Ritorno della Naturalità</h2>
+                <p>Il 2025 si preannuncia come un anno rivoluzionario per il mondo della bellezza, con trend che abbattono le barriere tradizionali e abbracciano una nuova concezione di self-care e personal expression.</p>
+                
+                <p>Dopo anni di makeup elaborato, il 2025 segna il trionfo del "skinimalism" - una bellezza che esalta la pelle naturale senza nasconderla, ma valorizzandola attraverso tecniche minimaliste e prodotti skin-care first.</p>
+                
+                <h3>Focus sulla Pelle</h3>
+                <ul>
+                    <li><strong>Glow naturale:</strong> Prodotti che migliorano l'aspetto della pelle dall'interno</li>
+                    <li><strong>Tonalità adattive:</strong> Foundation che si adattano al colorito naturale</li>
+                    <li><strong>Texture leggere:</strong> Formule che non appesantiscono e permettono alla pelle di respirare</li>
+                </ul>
+                
+                <h2>Colori Trend 2025</h2>
+                <p>Le tonalità primaverili di quest'anno sono ispirate alla natura e ai paesaggi mediterranei, con palette che spaziano dai toni tierra ai pastelli più delicati.</p>
+                
+                <h3>Palette Principali</h3>
+                <p><strong>Terracotta Warm:</strong> Perfetto per un look naturale e caldo</p>
+                <p><strong>Rose Dust:</strong> Rosa polvere per un tocco romantico e delicato</p>
+                <p><strong>Ocean Blue:</strong> Blu oceano per look audaci e fresh</p>
+                <p><strong>Forest Green:</strong> Verde foresta per un tocco di originalità</p>
+                
+                <blockquote>
+                    "La bellezza del futuro è sostenibile, inclusiva e tecnologicamente avanzata"
+                </blockquote>
+            `
+        },
+        'article-3': {
+            title: 'Minimalist Wardrobe Essentials: Building a Capsule Wardrobe',
+            date: '25 Ottobre 2024',
+            readTime: '7 min di lettura',
+            image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=400&fit=crop&auto=format',
+            content: `
+                <h2>La Filosofia Minimalista</h2>
+                <p>Costruire un guardaroba minimalista significa scegliere pezzi iconici e versatili che possono essere combinati in modi multipli, creando infinite possibilità senza sovrabbondanza.</p>
+                
+                <p>Il minimalismo nell'abbigliamento non è about possedere meno oggetti, ma di possedere oggetti migliori - pezzi che rappresentano davvero il tuo stile e che durano nel tempo.</p>
+                
+                <h3>Colori Essenziali</h3>
+                <ul>
+                    <li><strong>Nero:</strong> Classico e versatile, base di ogni guardaroba</li>
+                    <li><strong>Bianco:</strong> Fresh e moderno, perfetto per look puliti</li>
+                    <li><strong>Grigio:</strong> Neutro e elegante, facile da abbinare</li>
+                    <li><strong>Beige:</strong> Sofisticato e timeless</li>
+                </ul>
+                
+                <h2>Investimenti Fondamentali</h2>
+                <p>Un guardaroba capsule efficace si basa su pezzi di alta qualità che servono come base per la maggior parte dei tuoi outfit.</p>
+                
+                <h3>Must-Have Essential</h3>
+                <p>La chiave del successo è scegliere capi che possono essere dressed up o down, che sono comodi ma eleganti, e che ti fanno sentire sicura di te stessa.</p>
+                
+                <blockquote>
+                    "Il minimalismo nell'abbigliamento è l'arte di fare di meno per ottenere di più"
+                </blockquote>
+            `
+        }
     };
     
-    const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animationDelay = '0.1s';
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all article cards
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.article-card').forEach(card => {
-            cardObserver.observe(card);
-        });
+    if (articleData[articleId]) {
+        const data = articleData[articleId];
         
-        // MOBILE: Final setup check
-        setTimeout(() => {
-            console.log(`📱 Mobile setup check...`);
-            const articleCards = document.querySelectorAll('.article-card');
-            console.log(`📋 Found ${articleCards.length} article cards`);
-            
-            articleCards.forEach((card, index) => {
-                console.log(`📄 Card ${index + 1}:`, card.dataset.articleId);
-            });
-            
-            if (window.outfitChicApp) {
-                window.outfitChicApp.setupArticleNavigation();
-                console.log(`✅ Article navigation re-setup for mobile`);
-            }
-        }, 1000);
-    });
+        // Hide articles section
+        const articlesSection = document.querySelector('#home');
+        if (articlesSection) {
+            articlesSection.style.display = 'none';
+        }
+        
+        // Create article container
+        let articleContainer = document.querySelector('.article-detail-view');
+        if (!articleContainer) {
+            articleContainer = document.createElement('div');
+            articleContainer.className = 'article-detail-view';
+            document.body.appendChild(articleContainer);
+        }
+        
+        // Show article content
+        articleContainer.innerHTML = `
+            <button class="back-btn" onclick="hideArticleContent()">← Torna agli Articoli</button>
+            <article class="article-content">
+                <header class="article-header">
+                    <h1 class="article-title-detail">${data.title}</h1>
+                    <p class="article-meta">${data.date} • ${data.readTime}</p>
+                    <img src="${data.image}" alt="Article Image" class="article-hero-image">
+                </header>
+                <div class="article-body">
+                    ${data.content}
+                </div>
+            </article>
+        `;
+        
+        articleContainer.style.display = 'block';
+        window.scrollTo(0, 0);
+        
+        console.log(`✅ Article ${articleId} displayed successfully`);
+    } else {
+        console.error(`❌ Article ${articleId} not found`);
+        alert(`Articolo non trovato: ${articleId}`);
+    }
+}
+
+// Global function to hide article
+function hideArticleContent() {
+    console.log(`🔙 Hiding article content...`);
     
-    // Add service worker registration for PWA capabilities (optional)
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            // Uncomment below lines if you want to add PWA capabilities
-            // navigator.serviceWorker.register('/sw.js')
-            //     .then(registration => console.log('SW registered'))
-            //     .catch(error => console.log('SW registration failed'));
-        });
+    const articleContainer = document.querySelector('.article-detail-view');
+    const articlesSection = document.querySelector('#home');
+    
+    if (articleContainer) {
+        articleContainer.style.display = 'none';
     }
     
-    console.log(`✅ OutfitChic app initialization complete`);
+    if (articlesSection) {
+        articlesSection.style.display = 'block';
+    }
+    
+    window.scrollTo(0, 0);
+    console.log(`✅ Returned to articles`);
+}
+
+// Initialize app when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    console.log(`🚀 DOM loaded - setting up simple navigation...`);
+    
+    // Add onclick handlers directly to article cards
+    document.querySelectorAll('.article-card').forEach(card => {
+        const articleId = card.dataset.articleId;
+        if (articleId) {
+            // Direct onclick handler
+            card.onclick = function() {
+                console.log(`📱 Direct click on article: ${articleId}`);
+                navigateToArticle(articleId);
+            };
+            
+            // Add touch support
+            card.ontouchend = function(e) {
+                e.preventDefault();
+                console.log(`📱 Direct touch on article: ${articleId}`);
+                navigateToArticle(articleId);
+            };
+            
+            console.log(`✅ Added handlers for article: ${articleId}`);
+        }
+    });
+    
+    console.log(`✅ Simple navigation setup complete`);
 });
 
 // Add global error handling

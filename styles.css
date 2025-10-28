@@ -524,7 +524,7 @@ body {
 }
 
 /* Article Detail Styles */
-.article-detail {
+.article-detail, .article-detail-view {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -537,7 +537,7 @@ body {
 
 /* Mobile specific styles */
 @media (max-width: 768px) {
-    .article-detail {
+    .article-detail, .article-detail-view {
         padding: 15px;
         margin: 0;
         width: 100%;
