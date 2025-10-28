@@ -1,5 +1,5 @@
 // App State Management
-class FashionBlogApp {
+class OutfitChicApp {
     constructor() {
         this.currentSection = 'home';
         this.currentFilter = 'all';
@@ -111,8 +111,8 @@ class FashionBlogApp {
             case 'saved':
                 this.loadSavedContent();
                 break;
-            case 'profile':
-                this.loadProfileContent();
+            case 'shop':
+                this.loadShopContent();
                 break;
         }
     }
@@ -143,9 +143,263 @@ class FashionBlogApp {
         }
     }
 
-    // Load profile section content
-    loadProfileContent() {
-        // Profile content is static, no dynamic loading needed
+    // Load shop section content
+    loadShopContent() {
+        const container = document.querySelector('#shop .products-container');
+        if (container && container.children.length === 0) {
+            // Add Zalando-style products
+            const products = this.getShopProducts();
+            container.innerHTML = products.map(product => this.createProductHTML(product)).join('');
+            this.initializeLucideIcons();
+            this.setupProductInteractions();
+        }
+    }
+
+    // Get shop products data
+    getShopProducts() {
+        return [
+            {
+                id: 1,
+                image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop&auto=format",
+                brand: "Zara",
+                name: "Abito elegante nero",
+                price: 89.99,
+                originalPrice: 129.99,
+                discount: 30
+            },
+            {
+                id: 2,
+                image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format",
+                brand: "Nike",
+                name: "Air Force 1 White",
+                price: 149.99,
+                originalPrice: null,
+                discount: null
+            },
+            {
+                id: 3,
+                image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop&auto=format",
+                brand: "H&M",
+                name: "Jeans skinny blu",
+                price: 39.99,
+                originalPrice: 59.99,
+                discount: 33
+            },
+            {
+                id: 4,
+                image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=400&fit=crop&auto=format",
+                brand: "Gucci",
+                name: "Borsa tote in pelle",
+                price: 1899.99,
+                originalPrice: null,
+                discount: null
+            },
+            {
+                id: 5,
+                image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop&auto=format",
+                brand: "Uniqlo",
+                name: "Felpa oversize grigia",
+                price: 24.99,
+                originalPrice: null,
+                discount: null
+            },
+            {
+                id: 6,
+                image: "https://images.unsplash.com/photo-1566479179817-c7eae0f5e4e2?w=400&h=400&fit=crop&auto=format",
+                brand: "Adidas",
+                name: "T-shirt essentials",
+                price: 19.99,
+                originalPrice: 29.99,
+                discount: 33
+            },
+            {
+                id: 7,
+                image: "https://images.unsplash.com/photo-1595751865450-3e9bc53e0b46?w=400&h=400&fit=crop&auto=format",
+                brand: "Mango",
+                name: "Cappotto lunghissimo",
+                price: 159.99,
+                originalPrice: 229.99,
+                discount: 30
+            },
+            {
+                id: 8,
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&auto=format",
+                brand: "Levi's",
+                name: "Jeans 501 Original",
+                price: 89.99,
+                originalPrice: 129.99,
+                discount: 31
+            },
+            {
+                id: 9,
+                image: "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400&h=400&fit=crop&auto=format",
+                brand: "Converse",
+                name: "Chuck Taylor All Star",
+                price: 79.99,
+                originalPrice: null,
+                discount: null
+            },
+            {
+                id: 10,
+                image: "https://images.unsplash.com/photo-1580831408527-17e9e544e4b1?w=400&h=400&fit=crop&auto=format",
+                brand: "Cos",
+                name: "Trench coat beige",
+                price: 199.99,
+                originalPrice: 299.99,
+                discount: 33
+            },
+            {
+                id: 11,
+                image: "https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?w=400&h=400&fit=crop&auto=format",
+                brand: "Pandora",
+                name: "Bracelet argento",
+                price: 59.99,
+                originalPrice: 79.99,
+                discount: 25
+            },
+            {
+                id: 12,
+                image: "https://images.unsplash.com/photo-1549298916-11ae07e8c5ef?w=400&h=400&fit=crop&auto=format",
+                brand: "Puma",
+                name: "Sneakers RS-X",
+                price: 129.99,
+                originalPrice: null,
+                discount: null
+            }
+        ];
+    }
+
+    // Create product HTML
+    createProductHTML(product) {
+        return `
+            <div class="product-card" data-product-id="${product.id}">
+                <div class="product-image-container">
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <button class="product-wishlist" data-product-id="${product.id}">
+                        <i data-lucide="heart"></i>
+                    </button>
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">${product.brand}</div>
+                    <h3 class="product-name">${product.name}</h3>
+                    <div class="product-price">
+                        <span class="price-current">€${product.price.toFixed(2)}</span>
+                        ${product.originalPrice ? `<span class="price-original">€${product.originalPrice.toFixed(2)}</span>` : ''}
+                        ${product.discount ? `<span class="price-discount">-${product.discount}%</span>` : ''}
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-add-cart" data-product-id="${product.id}">
+                            <i data-lucide="shopping-cart"></i>
+                            <span>Aggiungi al carrello</span>
+                        </button>
+                        <button class="btn-quick-view" data-product-id="${product.id}">
+                            <i data-lucide="eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Setup product interactions
+    setupProductInteractions() {
+        // Wishlist toggle
+        document.querySelectorAll('.product-wishlist').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const productId = button.dataset.productId;
+                button.classList.toggle('active');
+                
+                // Show feedback
+                const isActive = button.classList.contains('active');
+                const icon = button.querySelector('i');
+                if (isActive) {
+                    // Brief animation feedback
+                    button.style.transform = 'scale(1.2)';
+                    setTimeout(() => {
+                        button.style.transform = 'scale(1)';
+                    }, 150);
+                }
+                
+                console.log(`Product ${productId} ${isActive ? 'added to' : 'removed from'} wishlist`);
+            });
+        });
+
+        // Add to cart
+        document.querySelectorAll('.btn-add-cart').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const productId = button.dataset.productId;
+                this.addToCart(productId, button);
+            });
+        });
+
+        // Quick view (placeholder)
+        document.querySelectorAll('.btn-quick-view').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const productId = button.dataset.productId;
+                console.log(`Quick view for product ${productId}`);
+                // Here you would open a product detail modal
+                this.showProductQuickView(productId);
+            });
+        });
+    }
+
+    // Add product to cart
+    addToCart(productId, button) {
+        // Update button state
+        button.classList.add('added');
+        button.innerHTML = `
+            <i data-lucide="check"></i>
+            <span>Aggiunto!</span>
+        `;
+
+        // Update cart badge
+        this.updateCartBadge();
+
+        // Reset button after 2 seconds
+        setTimeout(() => {
+            button.classList.remove('added');
+            button.innerHTML = `
+                <i data-lucide="shopping-cart"></i>
+                <span>Aggiungi al carrello</span>
+            `;
+            this.initializeLucideIcons();
+        }, 2000);
+
+        console.log(`Product ${productId} added to cart`);
+    }
+
+    // Update cart badge
+    updateCartBadge() {
+        const cartButton = document.querySelector('[data-section="shop"]');
+        let badge = cartButton.querySelector('.cart-badge');
+        
+        if (!badge) {
+            badge = document.createElement('div');
+            badge.className = 'cart-badge';
+            cartButton.appendChild(badge);
+        }
+        
+        // Simulate cart count (in a real app, this would come from state)
+        const currentCount = parseInt(badge.textContent) || 0;
+        const newCount = currentCount + 1;
+        badge.textContent = newCount;
+        
+        // Animate badge
+        badge.style.animation = 'none';
+        setTimeout(() => {
+            badge.style.animation = 'pulse 0.6s ease-out';
+        }, 10);
+    }
+
+    // Show product quick view (placeholder)
+    showProductQuickView(productId) {
+        // Placeholder for product detail modal
+        console.log(`Opening quick view for product ${productId}`);
+        // Here you would typically open a modal or navigate to product page
+        alert(`Anteprima prodotto ${productId} - In una versione completa, qui si aprirebbe un modal con i dettagli del prodotto!`);
     }
 
     // Get sample articles data
@@ -156,7 +410,7 @@ class FashionBlogApp {
                 category: "Fashion",
                 title: "Paris Fashion Week Highlights",
                 description: "The most stunning looks from the fashion capital",
-                author: "Chiara",
+
                 date: "16/1/2025",
                 likes: "1,892",
                 readTime: "4 min"
@@ -166,7 +420,7 @@ class FashionBlogApp {
                 category: "Beauty",
                 title: "Winter Skincare Routine",
                 description: "Essential products for glowing skin in cold weather",
-                author: "Chiara",
+
                 date: "16/1/2025",
                 likes: "2,156",
                 readTime: "6 min"
@@ -176,7 +430,7 @@ class FashionBlogApp {
                 category: "Lifestyle",
                 title: "Cozy Home Decor Ideas",
                 description: "Create a warm and inviting space this season",
-                author: "Chiara",
+
                 date: "15/1/2025",
                 likes: "3,421",
                 readTime: "8 min"
@@ -191,16 +445,11 @@ class FashionBlogApp {
                 <div class="card-image">
                     <img src="${article.image}" alt="${article.title}">
                     <div class="image-overlay">
-                        <div class="overlay-icon">
-                            <i data-lucide="wrench"></i>
-                        </div>
                     </div>
                 </div>
                 <div class="card-content">
                     <div class="author-section">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&auto=format" alt="${article.author}" class="author-avatar">
                         <div class="author-info">
-                            <h3 class="author-name">${article.author}</h3>
                             <span class="publish-date">${article.date}</span>
                         </div>
                         <span class="category-tag">${article.category}</span>
@@ -253,7 +502,7 @@ class FashionBlogApp {
 
     // Handle keyboard navigation
     handleKeyboard(e) {
-        const sections = ['home', 'categories', 'saved', 'profile'];
+        const sections = ['home', 'categories', 'saved', 'shop'];
         const currentIndex = sections.indexOf(this.currentSection);
 
         switch(e.key) {
@@ -304,8 +553,8 @@ document.head.appendChild(style);
 
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize the fashion blog app
-    window.fashionBlogApp = new FashionBlogApp();
+    // Initialize the OutfitChic app
+    window.outfitChicApp = new OutfitChicApp();
     
     // Add smooth scrolling for better UX
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -355,5 +604,5 @@ window.addEventListener('unhandledrejection', (e) => {
 
 // Export for potential module usage
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = FashionBlogApp;
+    module.exports = OutfitChicApp;
 }
