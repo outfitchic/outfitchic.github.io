@@ -503,22 +503,169 @@ class OutfitChicApp {
         });
     }
 
-    // Navigate to specific article
+    // Navigate to specific article (show on same page)
     navigateToArticle(articleId) {
-        const articleUrls = {
-            'article-1': 'milan-fashion-week-best-looks.html',
-            'article-2': 'spring-beauty-trends-2025.html',
-            'article-3': 'minimalist-wardrobe-essentials.html',
-            'article-4': 'paris-fashion-week-highlights.html',
-            'article-5': 'winter-skincare-routine.html',
-            'article-6': 'cozy-home-decor-ideas.html'
+        const articleContent = {
+            'article-1': {
+                title: 'Milan Fashion Week: I Look Più Iconici',
+                date: '15 Ottobre 2024',
+                readTime: '5 min di lettura',
+                image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=400&fit=crop&auto=format',
+                content: `
+                    <h2>Le Tendenze Dominanti</h2>
+                    <p>La Milano Fashion Week 2024 ha regalato momenti indimenticabili, con designer che hanno saputo ridefinire l'eleganza contemporanea attraverso collezioni audaci e sofisticate.</p>
+                    
+                    <p>Questa edizione è stata caratterizzata da un ritorno alle forme architettoniche, con capi che esaltano la silhouette femminile attraverso tagli precisi e materiali innovativi.</p>
+                    
+                    <h3>Colori e Tessuti</h3>
+                    <ul>
+                        <li><strong>Neutri Eleganti:</strong> Beige, grigi perla e neri profondi hanno dominato le passerelle</li>
+                        <li><strong>Tessuti Tecnici:</strong> Materiali high-tech che uniscono comfort e lusso</li>
+                        <li><strong>Texture Ricche:</strong> Velluto, seta e pelle trattata in modo innovativo</li>
+                    </ul>
+                    
+                    <h2>I Designer da Non Perdere</h2>
+                    <p>Alcuni nomi hanno saputo distinguersi con proposte particolarmente innovative, mescolando tradizione italiana e visione futuristica.</p>
+                    
+                    <h3>Punti Salienti delle Collezioni</h3>
+                    <p>Le passerelle hanno mostrato una precisa direzione verso capi versatili che possono easily transition dal daywear all'evening wear, dimostrando come la moda contemporanea sia sempre più orientata alla sostenibilità e alla praticità.</p>
+                    
+                    <blockquote>
+                        "La moda non è solo about estetica, ma about empowerment e self-expression"
+                    </blockquote>
+                    
+                    <h2>Come Integrare Queste Tendenze</h2>
+                    <p>Per chi desidera catturare lo spirito della Milano Fashion Week nel proprio guardaroba, le chiavi sono:</p>
+                    <ol>
+                        <li><strong>Investire in capi strutturati</strong> che esaltano la figura</li>
+                        <li><strong>Scegliere tessuti di qualità</strong> che durano nel tempo</li>
+                        <li><strong>Mixare textures</strong> per creare look interessanti</li>
+                        <li><strong>Focus sui dettagli</strong> come bottoni, cuciture e proporzioni</li>
+                    </ol>
+                `
+            },
+            'article-2': {
+                title: 'Spring Beauty Trends 2025: Le Novità Più Attese',
+                date: '20 Novembre 2024',
+                readTime: '6 min di lettura',
+                image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=400&fit=crop&auto=format',
+                content: `
+                    <h2>Il Ritorno della Naturalità</h2>
+                    <p>Il 2025 si preannuncia come un anno rivoluzionario per il mondo della bellezza, con trend che abbattono le barriere tradizionali e abbracciano una nuova concezione di self-care e personal expression.</p>
+                    
+                    <p>Dopo anni di makeup elaborato, il 2025 segna il trionfo del "skinimalism" - una bellezza che esalta la pelle naturale senza nasconderla, ma valorizzandola attraverso tecniche minimaliste e prodotti skin-care first.</p>
+                    
+                    <h3>Focus sulla Pelle</h3>
+                    <ul>
+                        <li><strong>Glow naturale:</strong> Prodotti che migliorano l'aspetto della pelle dall'interno</li>
+                        <li><strong>Tonalità adattive:</strong> Foundation che si adattano al colorito naturale</li>
+                        <li><strong>Texture leggere:</strong> Formule che non appesantiscono e permettono alla pelle di respirare</li>
+                    </ul>
+                    
+                    <h2>Colori Trend 2025</h2>
+                    <p>Le tonalità primaverili di quest'anno sono ispirate alla natura e ai paesaggi mediterranei, con palette che spaziano dai toni tierra ai pastelli più delicati.</p>
+                    
+                    <h3>Palette Principali</h3>
+                    <p><strong>Terracotta Warm:</strong> Perfetto per un look naturale e caldo</p>
+                    <p><strong>Rose Dust:</strong> Rosa polvere per un tocco romantico e delicato</p>
+                    <p><strong>Ocean Blue:</strong> Blu oceano per look audaci e fresh</p>
+                    <p><strong>Forest Green:</strong> Verde foresta per un tocco di originalità</p>
+                    
+                    <blockquote>
+                        "La bellezza del futuro è sostenibile, inclusiva e tecnologicamente avanzata"
+                    </blockquote>
+                `
+            },
+            'article-3': {
+                title: 'Minimalist Wardrobe Essentials: Building a Capsule Wardrobe',
+                date: '25 Ottobre 2024',
+                readTime: '7 min di lettura',
+                image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=400&fit=crop&auto=format',
+                content: `
+                    <h2>La Filosofia Minimalista</h2>
+                    <p>Costruire un guardaroba minimalista significa scegliere pezzi iconici e versatili che possono essere combinati in modi multipli, creando infinite possibilità senza sovrabbondanza.</p>
+                    
+                    <p>Il minimalismo nell'abbigliamento non è about possedere meno oggetti, ma di possedere oggetti migliori - pezzi che rappresentano davvero il tuo stile e che durano nel tempo.</p>
+                    
+                    <h3>Colori Essenziali</h3>
+                    <ul>
+                        <li><strong>Nero:</strong> Classico e versatile, base di ogni guardaroba</li>
+                        <li><strong>Bianco:</strong> Fresh e moderno, perfetto per look puliti</li>
+                        <li><strong>Grigio:</strong> Neutro e elegante, facile da abbinare</li>
+                        <li><strong>Beige:</strong> Sofisticato e timeless</li>
+                    </ul>
+                    
+                    <h2>Investimenti Fondamentali</h2>
+                    <p>Un guardaroba capsule efficace si basa su pezzi di alta qualità che servono come base per la maggior parte dei tuoi outfit.</p>
+                    
+                    <h3>Must-Have Essential</h3>
+                    <p>La chiave del successo è scegliere capi che possono essere dressed up o down, che sono comodi ma eleganti, e che ti fanno sentire sicura di te stessa.</p>
+                    
+                    <blockquote>
+                        "Il minimalismo nell'abbigliamento è l'arte di fare di meno per ottenere di più"
+                    </blockquote>
+                `
+            }
         };
 
-        if (articleUrls[articleId]) {
-            window.location.href = articleUrls[articleId];
+        if (articleContent[articleId]) {
+            this.showArticleContent(articleContent[articleId]);
         } else {
             console.warn(`Article ${articleId} not found`);
         }
+    }
+
+    // Show article content on current page
+    showArticleContent(articleData) {
+        // Hide articles section
+        const articlesSection = document.querySelector('#articles');
+        if (articlesSection) {
+            articlesSection.style.display = 'none';
+        }
+
+        // Create and show article content
+        const articleContainer = document.querySelector('.article-detail') || this.createArticleContainer();
+        
+        articleContainer.innerHTML = `
+            <button class="back-btn" onclick="this.hideArticleContent()">← Torna agli Articoli</button>
+            <article class="article-content">
+                <header class="article-header">
+                    <h1 class="article-title-detail">${articleData.title}</h1>
+                    <p class="article-meta">${articleData.date} • ${articleData.readTime}</p>
+                    <img src="${articleData.image}" alt="Article Image" class="article-hero-image">
+                </header>
+                <div class="article-body">
+                    ${articleData.content}
+                </div>
+            </article>
+        `;
+        
+        articleContainer.style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+
+    // Hide article content and return to articles
+    hideArticleContent() {
+        const articleContainer = document.querySelector('.article-detail');
+        const articlesSection = document.querySelector('#articles');
+        
+        if (articleContainer) {
+            articleContainer.style.display = 'none';
+        }
+        if (articlesSection) {
+            articlesSection.style.display = 'block';
+        }
+        window.scrollTo(0, 0);
+    }
+
+    // Create article container if not exists
+    createArticleContainer() {
+        const container = document.querySelector('.container');
+        const articleContainer = document.createElement('div');
+        articleContainer.className = 'article-detail';
+        articleContainer.style.display = 'none';
+        container.appendChild(articleContainer);
+        return articleContainer;
     }
 
     // Add event listeners

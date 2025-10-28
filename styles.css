@@ -505,3 +505,142 @@ body {
 .filter-pill:active i {
     transform: scale(0.9);
 }
+
+/* Article Detail Styles */
+.article-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: none;
+}
+
+.back-btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 30px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #555;
+}
+
+.article-content {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.article-header {
+    padding: 40px 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.article-title-detail {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.article-meta {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0 0 25px 0;
+}
+
+.article-hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.article-body {
+    padding: 40px;
+}
+
+.article-body h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin: 30px 0 15px 0;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+}
+
+.article-body h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #444;
+    margin: 25px 0 12px 0;
+}
+
+.article-body p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 20px 0;
+}
+
+.article-body ul, .article-body ol {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.article-body li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 8px 0;
+}
+
+.article-body strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.article-body blockquote {
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+    margin: 30px 0;
+    padding: 20px 25px;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    border-radius: 0 8px 8px 0;
+}
+
+@media (max-width: 768px) {
+    .article-detail {
+        padding: 15px;
+    }
+    
+    .article-header {
+        padding: 25px 20px 15px;
+    }
+    
+    .article-title-detail {
+        font-size: 2rem;
+    }
+    
+    .article-body {
+        padding: 25px 20px;
+    }
+    
+    .article-body h2 {
+        font-size: 1.5rem;
+    }
+    
+    .article-body p {
+        font-size: 1rem;
+    }
+}
