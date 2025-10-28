@@ -10,204 +10,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Navigation -->
-    <nav class="header-nav">
-        <div class="nav-left">
-            <button class="back-btn" onclick="history.back()">
-                <i data-lucide="arrow-left"></i>
-            </button>
-            <span class="nav-title">Articolo</span>
-        </div>
-        <div class="nav-right">
-            <button class="nav-btn">
-                <i data-lucide="share"></i>
-            </button>
-            <button class="nav-btn">
-                <i data-lucide="bookmark"></i>
-            </button>
-        </div>
-    </nav>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">OutfitChic</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#articles" class="nav-link">Articoli</a>
+                <a href="index.html#shop" class="nav-link">Shop</a>
+            </nav>
+        </header>
 
-    <!-- Article Hero -->
-    <article class="article-detail">
-        <div class="article-hero">
-            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=400&fit=crop&auto=format" alt="Milan Fashion Week" class="hero-image">
-            <div class="hero-overlay">
-                <span class="category-badge">Fashion</span>
-            </div>
-        </div>
+        <main class="article-detail">
+            <button class="back-btn" onclick="window.location.href='index.html'">← Torna alla Home</button>
+            
+            <article class="article-content">
+                <header class="article-header">
+                    <h1 class="article-title-detail">Milan Fashion Week: I Look Più Iconici</h1>
+                    <p class="article-meta">Pubblicato il 15 Ottobre 2024 • 5 min di lettura</p>
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=400&fit=crop&auto=format" alt="Milan Fashion Week" class="article-hero-image">
+                </header>
 
-        <div class="article-content">
-            <header class="article-header">
-                <h1 class="article-title">Milan Fashion Week: Best Looks</h1>
-                <div class="article-meta">
-                    <span class="publish-date">16 Gennaio 2025</span>
-                    <span class="read-time">5 min di lettura</span>
-                    <span class="author">di OutfitChic Editorial</span>
-                </div>
-                <div class="article-stats">
-                    <button class="stat-btn">
-                        <i data-lucide="heart"></i>
-                        <span>1,892</span>
-                    </button>
-                    <button class="stat-btn">
-                        <i data-lucide="message-circle"></i>
-                        <span>247</span>
-                    </button>
-                    <button class="stat-btn">
-                        <i data-lucide="share"></i>
-                        <span>Condividi</span>
-                    </button>
-                </div>
-            </header>
+                <div class="article-body">
+                    <p>La Milano Fashion Week 2024 ha regalato momenti indimenticabili, con designer che hanno saputo ridefinire l'eleganza contemporanea attraverso collezioni audaci e sofisticate.</p>
 
-            <div class="article-body">
-                <p class="article-intro">
-                    La Milano Fashion Week ha regalato momenti indimenticabili con collezioni straordinarie che hanno ridefinito il concetto di eleganza contemporanea. I migliori look dalle passerelle più prestigiose della città della moda.
-                </p>
+                    <h2>Le Tendenze Dominanti</h2>
+                    <p>Questa edizione è stata caratterizzata da un ritorno alle forme architettoniche, con capi che esaltano la silhouette femminile attraverso tagli precisi e materiali innovativi.</p>
 
-                <h2>Le Collezioni più Acclamate</h2>
-                <p>
-                    Tra le case di moda che hanno dominato questa edizione, spiccano nomi iconici che hanno saputo interpretare perfettamente le tendenze del momento. Ogni collezione racconta una storia unica, fatta di innovazione, tradizione e visioni artistiche rivoluzionarie.
-                </p>
+                    <h3>Colori e Tessuti</h3>
+                    <ul>
+                        <li><strong>Neutri Eleganti:</strong> Beige, grigi perla e neri profondi hanno dominato le passerelle</li>
+                        <li><strong>Tessuti Tecnici:</strong> Materiali high-tech che uniscono comfort e lusso</li>
+                        <li><strong>Texture Ricche:</strong> Velluto, seta e pelle trattata in modo innovativo</li>
+                    </ul>
 
-                <h3>Trend Dominanti</h3>
-                <p>
-                    Quest'anno, i colori vibranti hanno fatto la loro comparsa decisa sulle passerelle milanesi. Dai toni elettrici ai pastelli delicati, ogni nuances ha trovato la sua perfetta collocazione in outfit che sposano eleganza e contemporaneità. 
-                </p>
+                    <h2>I Designer da Non Perdere</h2>
+                    <p>Alcuni nomi hanno saputo distinguersi con proposte particolarmente innovative, mescolando tradizione italiana e visione futuristica.</p>
 
-                <div class="highlight-box">
-                    <h4>Dai nostri redattori</h4>
-                    <p>"La Milan Fashion Week 2025 ha dimostrato come la tradizione italiana nel fashion possa evolversi mantenendo la sua essenza unica. Un mix perfetto tra heritage e innovazione."</p>
-                </div>
+                    <h3>Punti Salienti delle Collezioni</h3>
+                    <p>Le passerelle hanno mostrato una precisa direzione verso capi versatili che possono easily transition dal daywear all'evening wear, dimostrando come la moda contemporanea sia sempre più orientata alla sostenibilità e alla praticità.</p>
 
-                <h2>Accessori e Dettagli</h2>
-                <p>
-                    Gli accessori hanno giocato un ruolo fondamentale nell'espressione di ogni look. Borse architettoniche, gioielli minimal e calzature statement hanno completato ogni ensemble con personalità e stile.
-                </p>
-
-                <h3>Sustainable Fashion</h3>
-                <p>
-                    Una menzione speciale va alle collezioni sostenibili che hanno dimostrato come bellezza e responsabilità ambientale possano coesistere. Materiali riciclati e processi produttivi eco-friendly rappresentano il futuro della moda.
-                </p>
-
-                <h2>Influenze Street Style</h2>
-                <p>
-                    Fuori dalle passerelle, le strade di Milano si sono trasformate in un palcoscenico permanente. Il mix tra alta couture e streetwear ha creato look audaci e irriverenti che riflettono l'energia giovane della città.
-                </p>
-
-                <div class="quote-section">
                     <blockquote>
-                        "La moda milanese non è solo about clothing, it's about attitude, passion e storytelling"
+                        "La moda non è solo about estetica, ma about empowerment e self-expression" - Anonymous Designer
                     </blockquote>
-                    <cite>- Stylist senior, OutfitChic</cite>
-                </div>
 
-                <h2>Look da Non Perdere</h2>
-                <p>
-                    Tra tutti i look presentati, alcuni sono destinati a diventare iconici. Abiti strutturati che abbracciano la silhouette, capispalla dal taglio precision e dettagli decorativi che fanno la differenza.
-                </p>
+                    <h2>Come Integrare Queste Tendenze</h2>
+                    <p>Per chi desidera catturare lo spirito della Milano Fashion Week nel proprio guardaroba, le chiavi sono:</p>
+                    <ol>
+                        <li><strong>Investire in capi strutturati</strong> che esaltano la figura</li>
+                        <li><strong>Scegliere tessuti di qualità</strong> che durano nel tempo</li>
+                        <li><strong>Mixare textures</strong> per creare look interessanti</li>
+                        <li><strong>Focus sui dettagli</strong> come bottoni, cuciture e proporzioni</li>
+                    </ol>
 
-                <h3>Prossime Tendenze</h3>
-                <p>
-                    Quello che abbiamo visto a Milano预示i le tendenze che domineranno l'autunno-inverno. Preparatevi a incorporarvi nei vostri outfit quotidiani: dal color blocking audace ai capi più classici reinterpretati in chiave moderna.
-                </p>
-
-                <div class="article-footer">
-                    <div class="tags">
-                        <span class="tag">#MilanFashionWeek</span>
-                        <span class="tag">#FashionTrends</span>
-                        <span class="tag">#A/W2025</span>
-                        <span class="tag">#Milano</span>
-                        <span class="tag">#RunwayLooks</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- Related Articles -->
-    <section class="related-articles">
-        <h2>Articoli correlati</h2>
-        <div class="related-articles-grid">
-            <article class="related-card">
-                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=300&h=200&fit=crop&auto=format" alt="Beauty Trends">
-                <div class="related-content">
-                    <span class="category-tag">Beauty</span>
-                    <h3>Spring Beauty Trends 2025</h3>
-                    <p>Scopri i look makeup e skincare più hot</p>
+                    <h2>Conclusioni</h2>
+                    <p>La Milano Fashion Week 2024 ha dimostrato come la capitale della moda italiana continui a essere un faro di innovazione e stile nel panorama fashion internazionale. I look presentati non sono solo trend passeggeri, ma vere e proprie dichiarazioni di intenti per il futuro della moda.</p>
                 </div>
             </article>
-            
-            <article class="related-card">
-                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=300&h=200&fit=crop&auto=format" alt="Minimalist Wardrobe">
-                <div class="related-content">
-                    <span class="category-tag">Lifestyle</span>
-                    <h3>Minimalist Wardrobe Essentials</h3>
-                    <p>Come costruire un guardaroba che dura</p>
-                </div>
-            </article>
-            
-            <article class="related-card">
-                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=300&h=200&fit=crop&auto=format" alt="Paris Fashion">
-                <div class="related-content">
-                    <span class="category-tag">Fashion</span>
-                    <h3>Paris Fashion Week Highlights</h3>
-                    <p>I look più stupefacenti dalla capitale della moda</p>
-                </div>
-            </article>
-        </div>
-    </section>
+        </main>
 
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+        <footer class="footer">
+            <p>&copy; 2024 OutfitChic. Tutti i diritti riservati.</p>
+        </footer>
+    </div>
 
-        // Article interactions
-        document.querySelectorAll('.stat-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                if (this.querySelector('[data-lucide="heart"]')) {
-                    // Heart animation
-                    this.style.color = '#ff4757';
-                    const count = this.querySelector('span');
-                    count.textContent = (parseInt(count.textContent.replace(',', '')) + 1).toLocaleString();
-                }
-            });
-        });
-
-        // Bookmark functionality
-        document.querySelector('.nav-right .nav-btn:last-child').addEventListener('click', function() {
-            this.classList.toggle('active');
-            if (this.classList.contains('active')) {
-                alert('Articolo salvato nei preferiti!');
-            } else {
-                alert('Articolo rimosso dai preferiti');
-            }
-        });
-
-        // Related articles navigation
-        document.querySelectorAll('.related-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const title = this.querySelector('h3').textContent;
-                alert(`Navigazione all'articolo: ${title}`);
-            });
-        });
-
-        // Share functionality
-        document.querySelector('[data-lucide="share"]').addEventListener('click', function() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Milan Fashion Week: Best Looks - OutfitChic',
-                    text: 'Scopri i migliori look dalla Milano Fashion Week',
-                    url: window.location.href
-                });
-            } else {
-                // Fallback - copy to clipboard
-                navigator.clipboard.writeText(window.location.href);
-                alert('Link copiato negli appunti!');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
