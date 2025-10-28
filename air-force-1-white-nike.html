@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Force 1 White - Nike | OutfitChic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="header-nav">
+        <div class="nav-left">
+            <button class="back-btn" onclick="history.back()">
+                <i data-lucide="arrow-left"></i>
+            </button>
+            <span class="nav-title">Dettaglio Prodotto</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn">
+                <i data-lucide="search"></i>
+            </button>
+            <button class="nav-btn">
+                <i data-lucide="heart"></i>
+            </button>
+            <button class="nav-btn">
+                <i data-lucide="shopping-bag"></i>
+                <span class="badge">2</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#shop">Shop</a>
+        <span>/</span>
+        <span>Air Force 1 White</span>
+    </div>
+
+    <!-- Product Content -->
+    <main class="product-detail-content">
+        <!-- Product Gallery -->
+        <section class="product-gallery">
+            <div class="gallery-main">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=600&fit=crop&auto=format" alt="Air Force 1 White" id="mainImage">
+            </div>
+            <div class="gallery-thumbs">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=100&h=100&fit=crop&auto=format" alt="Vista frontale" onclick="changeImage(this.src)">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=100&h=100&fit=crop&auto=format" alt="Vista laterale" onclick="changeImage(this.src)">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&h=100&fit=crop&auto=format" alt="Vista posteriore" onclick="changeImage(this.src)">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=100&h=100&fit=crop&auto=format" alt="Dettaglio suola" onclick="changeImage(this.src)">
+            </div>
+        </section>
+
+        <!-- Product Info -->
+        <section class="product-info-section">
+            <div class="product-brand">Nike</div>
+            <h1 class="product-title">Air Force 1 White</h1>
+            
+            <div class="product-rating">
+                <div class="stars">
+                    <i data-lucide="star" class="filled"></i>
+                    <i data-lucide="star" class="filled"></i>
+                    <i data-lucide="star" class="filled"></i>
+                    <i data-lucide="star" class="filled"></i>
+                    <i data-lucide="star" class="filled"></i>
+                </div>
+                <span class="rating-text">(2,847 recensioni)</span>
+            </div>
+
+            <div class="product-price">
+                <span class="price-current">€149.99</span>
+            </div>
+
+            <div class="product-description">
+                <p>Le leggendarie Nike Air Force 1 in versione white/classic. Iconiche sneakers da basket che hanno segnato la storia dello streetwear e della moda urbana. Comfort eccezionale e stile intramontabile.</p>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="product-options">
+                <div class="option-group">
+                    <label class="option-label">Taglia EU:</label>
+                    <div class="size-options">
+                        <button class="size-btn">36</button>
+                        <button class="size-btn">37</button>
+                        <button class="size-btn">38</button>
+                        <button class="size-btn active">39</button>
+                        <button class="size-btn">40</button>
+                        <button class="size-btn">41</button>
+                        <button class="size-btn">42</button>
+                        <button class="size-btn">43</button>
+                    </div>
+                </div>
+
+                <!-- Color Selection -->
+                <div class="option-group">
+                    <label class="option-label">Colore:</label>
+                    <div class="color-options">
+                        <div class="color-option active" style="background-color: #fff; border: 1px solid #ddd;" title="White"></div>
+                        <div class="color-option" style="background-color: #000;" title="Black"></div>
+                        <div class="color-option" style="background-color: #f5f5f5;" title="Triple White"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="quantity-selector">
+                <label class="quantity-label">Quantità:</label>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="5">
+                    <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="product-actions">
+                <button class="btn-add-cart-large">
+                    <i data-lucide="shopping-cart"></i>
+                    <span>Aggiungi al carrello</span>
+                </button>
+                <button class="btn-buy-now">
+                    <span>Compra ora</span>
+                </button>
+            </div>
+
+            <button class="btn-wishlist-large">
+                <i data-lucide="heart"></i>
+                <span>Aggiungi ai preferiti</span>
+            </button>
+
+            <!-- Product Features -->
+            <div class="product-features">
+                <div class="feature-item">
+                    <i data-lucide="truck"></i>
+                    <span>Consegna gratuita</span>
+                </div>
+                <div class="feature-item">
+                    <i data-lucide="rotate-ccw"></i>
+                    <span>Resi gratuiti 60 giorni</span>
+                </div>
+                <div class="feature-item">
+                    <i data-lucide="award"></i>
+                    <span>Original Nike</span>
+                </div>
+            </div>
+
+            <!-- Product Details Tabs -->
+            <div class="product-tabs">
+                <div class="tab-header">
+                    <button class="tab-btn active" onclick="showTab('description')">Descrizione</button>
+                    <button class="tab-btn" onclick="showTab('specifications')">Specifiche</button>
+                    <button class="tab-btn" onclick="showTab('shipping')">Spedizione</button>
+                    <button class="tab-btn" onclick="showTab('reviews')">Recensioni</button>
+                </div>
+                
+                <div class="tab-content active" id="description">
+                    <h3>Descrizione del prodotto</h3>
+                    <p>Le Nike Air Force 1 sono le sneakers più iconiche di tutti i tempi. Nata nel 1982 come scarpa da basket, è diventata un'icona della cultura urbana e dello streetwear.</p>
+                    
+                    <h4>Caratteristiche principali:</h4>
+                    <ul>
+                        <li>Design classico e intramontabile</li>
+                        <li>Suola Air per comfort superiore</li>
+                        <li>Materiali premium e resistenti</li>
+                        <li>Perfette per ogni occasione</li>
+                        <li>Disponibili in diverse taglie</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content" id="specifications">
+                    <h3>Specifiche tecniche</h3>
+                    <table class="spec-table">
+                        <tr><td>Marca</td><td>Nike</td></tr>
+                        <tr><td>Modello</td><td>Air Force 1 '07</td></tr>
+                        <tr><td>Materiale</td><td>Pelle sintetica e mesh</td></tr>
+                        <tr><td>Suola</td><td>Gomma con tecnologia Air</td></tr>
+                        <tr><td>Chiusura</td><td>Lacci</td></tr>
+                        <tr><td>Genere</td><td>Unisex</td></tr>
+                    </table>
+                </div>
+                
+                <div class="tab-content" id="shipping">
+                    <h3>Informazioni spedizione</h3>
+                    <p><strong>Consegna gratuita</strong> su ordini superiori a €100</p>
+                    <p><strong>Tempi di consegna:</strong> 2-4 giorni lavorativi</p>
+                    <p><strong>Spedizione express:</strong> 24-48h (+€12.99)</p>
+                    <p><strong>Resi gratuiti:</strong> 60 giorni per cambio taglia o rimborso</p>
+                    <p><strong>Nota:</strong> Prodotto originale Nike con garanzia ufficiale</p>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <h3>Recensioni clienti</h3>
+                    <div class="reviews-summary">
+                        <div class="rating-average">
+                            <span class="rating-score">4.9</span>
+                            <div class="stars">
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                            </div>
+                            <span class="review-count">2,847 recensioni</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer-name">Marco T.</span>
+                            <div class="stars">
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">Le classiche Air Force 1, sempre perfette! Comode, eleganti e di qualità eccellente. Nike non delude mai.</p>
+                        <span class="review-date">1 settimana fa</span>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer-name">Alessandro R.</span>
+                            <div class="stars">
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">Prodotto originale, consegna veloce e imballaggio perfetto. La taglia è esatta, le scarpe sono comodissime.</p>
+                        <span class="review-date">2 settimane fa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <h2>Prodotti correlati</h2>
+        <div class="related-grid">
+            <div class="related-item">
+                <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=200&h=200&fit=crop&auto=format" alt="Converse">
+                <h4>Chuck Taylor All Star</h4>
+                <span class="related-price">€79.99</span>
+            </div>
+            <div class="related-item">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=200&h=200&fit=crop&auto=format" alt="Air Max">
+                <h4>Air Max 270</h4>
+                <span class="related-price">€159.99</span>
+            </div>
+            <div class="related-item">
+                <img src="https://images.unsplash.com/photo-1549298916-11ae07e8c5ef?w=200&h=200&fit=crop&auto=format" alt="Puma">
+                <h4>Sneakers RS-X</h4>
+                <span class="related-price">€129.99</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Image gallery
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src.replace('w=100&h=100', 'w=600&h=600');
+        }
+
+        // Quantity controls
+        function increaseQuantity() {
+            const input = document.getElementById('quantity');
+            if (parseInt(input.value) < 5) {
+                input.value = parseInt(input.value) + 1;
+            }
+        }
+
+        function decreaseQuantity() {
+            const input = document.getElementById('quantity');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active class to selected tab
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        // Size selection
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Color selection
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(o => o.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelector('.btn-add-cart-large').addEventListener('click', function() {
+            const quantity = document.getElementById('quantity').value;
+            const selectedSize = document.querySelector('.size-btn.active').textContent;
+            const selectedColor = document.querySelector('.color-option.active').title;
+            
+            alert(`Prodotto aggiunto al carrello!\nQuantità: ${quantity}\nTaglia EU: ${selectedSize}\nColore: ${selectedColor}`);
+        });
+
+        // Buy now functionality
+        document.querySelector('.btn-buy-now').addEventListener('click', function() {
+            alert('Redirect al checkout...');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abito elegante nero - Zara | OutfitChic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="header-nav">
+        <div class="nav-left">
+            <button class="back-btn" onclick="history.back()">
+                <i data-lucide="arrow-left"></i>
+            </button>
+            <span class="nav-title">Dettaglio Prodotto</span>
+        </div>
+        <div class="nav-right">
+            <button class="nav-btn">
+                <i data-lucide="search"></i>
+            </button>
+            <button class="nav-btn">
+                <i data-lucide="heart"></i>
+            </button>
+            <button class="nav-btn">
+                <i data-lucide="shopping-bag"></i>
+                <span class="badge">2</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#shop">Shop</a>
+        <span>/</span>
+        <span>Abito elegante nero</span>
+    </div>
+
+    <!-- Product Content -->
+    <main class="product-detail-content">
+        <!-- Product Gallery -->
+        <section class="product-gallery">
+            <div class="gallery-main">
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&h=600&fit=crop&auto=format" alt="Abito elegante nero" id="mainImage">
+            </div>
+            <div class="gallery-thumbs">
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=100&h=100&fit=crop&auto=format" alt="Vista frontale" onclick="changeImage(this.src)">
+                <img src="https://images.unsplash.com/photo-1566479179817-c7eae0f5e4e2?w=100&h=100&fit=crop&auto=format" alt="Vista laterale" onclick="changeImage(this.src)">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=100&h=100&fit=crop&auto=format" alt="Vista posteriore" onclick="changeImage(this.src)">
+                <img src="https://images.unsplash.com/photo-1580831408527-17e9e544e4b1?w=100&h=100&fit=crop&auto=format" alt="Dettaglio tessuto" onclick="changeImage(this.src)">
+            </div>
+        </section>
+
+        <!-- Product Info -->
+        <section class="product-info-section">
+            <div class="product-brand">Zara</div>
+            <h1 class="product-title">Abito elegante nero</h1>
+            
+            <div class="product-rating">
+                <div class="stars">
+                    <i data-lucide="star" class="filled"></i>
+                    <i data-lucide="star" class="filled"></i>
+                    <i data-lucide="star" class="filled"></i>
+                    <i data-lucide="star" class="filled"></i>
+                    <i data-lucide="star"></i>
+                </div>
+                <span class="rating-text">(127 recensioni)</span>
+            </div>
+
+            <div class="product-price">
+                <span class="price-current">€89.99</span>
+                <span class="price-original">€129.99</span>
+                <span class="price-discount">-30%</span>
+            </div>
+
+            <div class="product-description">
+                <p>Elegante abito nero perfetto per occasioni formali e serate speciali. Realizzato in tessuto di alta qualità con taglio moderno e sofisticato. Ideale per un look raffinato e senza tempo.</p>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="product-options">
+                <div class="option-group">
+                    <label class="option-label">Taglia:</label>
+                    <div class="size-options">
+                        <button class="size-btn">XS</button>
+                        <button class="size-btn">S</button>
+                        <button class="size-btn active">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                </div>
+
+                <!-- Color Selection -->
+                <div class="option-group">
+                    <label class="option-label">Colore:</label>
+                    <div class="color-options">
+                        <div class="color-option active" style="background-color: #000;" title="Nero"></div>
+                        <div class="color-option" style="background-color: #333;" title="Grigio scuro"></div>
+                        <div class="color-option" style="background-color: #666;" title="Grigio"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="quantity-selector">
+                <label class="quantity-label">Quantità:</label>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                    <input type="number" id="quantity" value="1" min="1" max="10">
+                    <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="product-actions">
+                <button class="btn-add-cart-large">
+                    <i data-lucide="shopping-cart"></i>
+                    <span>Aggiungi al carrello</span>
+                </button>
+                <button class="btn-buy-now">
+                    <span>Compra ora</span>
+                </button>
+            </div>
+
+            <button class="btn-wishlist-large">
+                <i data-lucide="heart"></i>
+                <span>Aggiungi ai preferiti</span>
+            </button>
+
+            <!-- Product Features -->
+            <div class="product-features">
+                <div class="feature-item">
+                    <i data-lucide="truck"></i>
+                    <span>Consegna gratuita</span>
+                </div>
+                <div class="feature-item">
+                    <i data-lucide="rotate-ccw"></i>
+                    <span>Resi gratuiti 30 giorni</span>
+                </div>
+                <div class="feature-item">
+                    <i data-lucide="shield-check"></i>
+                    <span>Garanzia 2 anni</span>
+                </div>
+            </div>
+
+            <!-- Product Details Tabs -->
+            <div class="product-tabs">
+                <div class="tab-header">
+                    <button class="tab-btn active" onclick="showTab('description')">Descrizione</button>
+                    <button class="tab-btn" onclick="showTab('specifications')">Specifiche</button>
+                    <button class="tab-btn" onclick="showTab('shipping')">Spedizione</button>
+                    <button class="tab-btn" onclick="showTab('reviews')">Recensioni</button>
+                </div>
+                
+                <div class="tab-content active" id="description">
+                    <h3>Descrizione del prodotto</h3>
+                    <p>Un abito elegante e versatile, perfetto per ogni occasione speciale. Il tessuto premium garantisce comfort e durata, mentre il taglio moderno esalta la silhouette femminile.</p>
+                    
+                    <h4>Caratteristiche principali:</h4>
+                    <ul>
+                        <li>Taglio moderno e raffinato</li>
+                        <li>Tessuto di alta qualità</li>
+                        <li>Perfetto per occasioni formali</li>
+                        <li>Lavabile in lavatrice</li>
+                        <li>Disponibile in diverse taglie</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content" id="specifications">
+                    <h3>Specifiche tecniche</h3>
+                    <table class="spec-table">
+                        <tr><td>Materiale</td><td>95% Poliestere, 5% Elastan</td></tr>
+                        <tr><td>Cura</td><td>Lavaggio a 30°C</td></tr>
+                        <tr><td>Taglia</td><td>Come da tabella taglie</td></tr>
+                        <tr><td>Colore</td><td>Nero</td></tr>
+                        <tr><td>Origine</td><td>Prodotto in UE</td></tr>
+                    </table>
+                </div>
+                
+                <div class="tab-content" id="shipping">
+                    <h3>Informazioni spedizione</h3>
+                    <p><strong>Consegna standard gratuita</strong> su ordini superiori a €50</p>
+                    <p><strong>Tempi di consegna:</strong> 3-5 giorni lavorativi</p>
+                    <p><strong>Spedizione express:</strong> 1-2 giorni (+€9.99)</p>
+                    <p><strong>Resi gratuiti:</strong> 30 giorni per il rimborso completo</p>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <h3>Recensioni clienti</h3>
+                    <div class="reviews-summary">
+                        <div class="rating-average">
+                            <span class="rating-score">4.2</span>
+                            <div class="stars">
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star"></i>
+                            </div>
+                            <span class="review-count">127 recensioni</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer-name">Maria R.</span>
+                            <div class="stars">
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">Abito bellissimo e di ottima qualità. Taglia perfetta e materiale molto gradevole. Lo consiglio!</p>
+                        <span class="review-date">15 giorni fa</span>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer-name">Laura M.</span>
+                            <div class="stars">
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                                <i data-lucide="star" class="filled"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">Perfetto per una cerimonia. Elegante e raffinato, esattamente quello che cercavo.</p>
+                        <span class="review-date">1 mese fa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <h2>Prodotti correlati</h2>
+        <div class="related-grid">
+            <div class="related-item">
+                <img src="https://images.unsplash.com/photo-1595751865450-3e9bc53e0b46?w=200&h=200&fit=crop&auto=format" alt="Cappotto">
+                <h4>Cappotto elegante</h4>
+                <span class="related-price">€159.99</span>
+            </div>
+            <div class="related-item">
+                <img src="https://images.unsplash.com/photo-1580831408527-17e9e544e4b1?w=200&h=200&fit=crop&auto=format" alt="Trench coat">
+                <h4>Trench coat beige</h4>
+                <span class="related-price">€199.99</span>
+            </div>
+            <div class="related-item">
+                <img src="https://images.unsplash.com/photo-1566479179817-c7eae0f5e4e2?w=200&h=200&fit=crop&auto=format" alt="T-shirt">
+                <h4>T-shirt basics</h4>
+                <span class="related-price">€19.99</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Image gallery
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src.replace('w=100&h=100', 'w=600&h=600');
+        }
+
+        // Quantity controls
+        function increaseQuantity() {
+            const input = document.getElementById('quantity');
+            if (parseInt(input.value) < 10) {
+                input.value = parseInt(input.value) + 1;
+            }
+        }
+
+        function decreaseQuantity() {
+            const input = document.getElementById('quantity');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active class to selected tab
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        // Size selection
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Color selection
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.color-option').forEach(o => o.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelector('.btn-add-cart-large').addEventListener('click', function() {
+            const quantity = document.getElementById('quantity').value;
+            const selectedSize = document.querySelector('.size-btn.active').textContent;
+            const selectedColor = document.querySelector('.color-option.active').title;
+            
+            alert(`Prodotto aggiunto al carrello!\nQuantità: ${quantity}\nTaglia: ${selectedSize}\nColore: ${selectedColor}`);
+        });
+
+        // Buy now functionality
+        document.querySelector('.btn-buy-now').addEventListener('click', function() {
+            alert('Redirect al checkout...');
+        });
+    </script>
+</body>
+</html>
