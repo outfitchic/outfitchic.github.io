@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Blog - Il Tuo Blog di Moda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest/dist/umd/lucide.js">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1 class="app-title">Fashion Blog</h1>
+            <p class="app-subtitle">Your Daily Dose of Style</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="articles-container">
+                <!-- Article Card 1 -->
+                <article class="article-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop&auto=format" alt="Milan Fashion Week">
+                        <div class="image-overlay">
+                            <div class="overlay-icon">
+                                <i data-lucide="wrench"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="author-section">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&auto=format" alt="Chiara" class="author-avatar">
+                            <div class="author-info">
+                                <h3 class="author-name">Chiara</h3>
+                                <span class="publish-date">15/1/2025</span>
+                            </div>
+                            <span class="category-tag">Fashion</span>
+                        </div>
+                        <h2 class="article-title">Milan Fashion Week: Best Looks</h2>
+                        <p class="article-description">Exploring the latest trends from the runways</p>
+                        <div class="article-stats">
+                            <div class="stat-item">
+                                <i data-lucide="heart"></i>
+                                <span>2,847</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <span>5 min</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop&auto=format" alt="Beauty Products">
+                        <div class="image-overlay">
+                            <div class="overlay-icon beauty">
+                                <i data-lucide="wrench"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="author-section">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&auto=format" alt="Chiara" class="author-avatar">
+                            <div class="author-info">
+                                <h3 class="author-name">Chiara</h3>
+                                <span class="publish-date">15/1/2025</span>
+                            </div>
+                            <span class="category-tag">Beauty</span>
+                        </div>
+                        <h2 class="article-title">Spring Beauty Trends 2025</h2>
+                        <p class="article-description">Discover the hottest makeup and skincare looks</p>
+                        <div class="article-stats">
+                            <div class="stat-item">
+                                <i data-lucide="heart"></i>
+                                <span>1,523</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <span>7 min</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop&auto=format" alt="Lifestyle">
+                        <div class="image-overlay">
+                            <div class="overlay-icon">
+                                <i data-lucide="wrench"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="author-section">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&auto=format" alt="Chiara" class="author-avatar">
+                            <div class="author-info">
+                                <h3 class="author-name">Chiara</h3>
+                                <span class="publish-date">14/1/2025</span>
+                            </div>
+                            <span class="category-tag">Lifestyle</span>
+                        </div>
+                        <h2 class="article-title">Minimalist Wardrobe Essentials</h2>
+                        <p class="article-description">Building a capsule wardrobe that lasts</p>
+                        <div class="article-stats">
+                            <div class="stat-item">
+                                <i data-lucide="heart"></i>
+                                <span>3,142</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <span>6 min</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="content-section">
+            <h2 class="section-title">Categorie</h2>
+            <div class="filter-pills">
+                <button class="filter-pill active" data-category="all">
+                    <i data-lucide="grid-3x3"></i>
+                    Tutti
+                </button>
+                <button class="filter-pill" data-category="fashion">
+                    <i data-lucide="shirt"></i>
+                    Fashion
+                </button>
+                <button class="filter-pill" data-category="beauty">
+                    <i data-lucide="smile"></i>
+                    Beauty
+                </button>
+                <button class="filter-pill" data-category="lifestyle">
+                    <i data-lucide="star"></i>
+                    Lifestyle
+                </button>
+            </div>
+            <div class="articles-container">
+                <!-- Categorized articles will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Saved Section -->
+        <section id="saved" class="content-section">
+            <h2 class="section-title">Salvati</h2>
+            <p class="saved-subtitle">1 articoli salvati</p>
+            <div class="articles-container">
+                <!-- Saved Article Card -->
+                <article class="article-card saved-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop&auto=format" alt="Milan Fashion Week">
+                        <div class="image-overlay">
+                            <div class="overlay-icon">
+                                <i data-lucide="wrench"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="author-section">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&auto=format" alt="Chiara" class="author-avatar">
+                            <div class="author-info">
+                                <h3 class="author-name">Chiara</h3>
+                                <span class="publish-date">15/1/2025</span>
+                            </div>
+                            <span class="category-tag">Fashion</span>
+                        </div>
+                        <h2 class="article-title">Milan Fashion Week: Best Looks</h2>
+                        <p class="article-description">Exploring the latest trends from the runways</p>
+                        <div class="article-stats">
+                            <div class="stat-item">
+                                <i data-lucide="heart"></i>
+                                <span>2,847</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <span>5 min</span>
+                            </div>
+                            <div class="stat-item saved">
+                                <i data-lucide="bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="content-section">
+            <h2 class="section-title">Profilo</h2>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&auto=format" alt="Profile" class="profile-avatar">
+                    <h3 class="profile-name">Chiara Rossi</h3>
+                    <p class="profile-bio">Fashion enthusiast & lifestyle blogger</p>
+                </div>
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <span class="stat-number">127</span>
+                        <span class="stat-label">Articoli</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="stat-number">15.2K</span>
+                        <span class="stat-label">Follower</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="stat-number">892</span>
+                        <span class="stat-label">Seguiti</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-section="home">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+        </button>
+        <button class="nav-item" data-section="categories">
+            <i data-lucide="grid-3x3"></i>
+            <span>Categories</span>
+        </button>
+        <button class="nav-item" data-section="saved">
+            <i data-lucide="bookmark"></i>
+            <span>Saved</span>
+        </button>
+        <button class="nav-item" data-section="profile">
+            <i data-lucide="user"></i>
+            <span>Profile</span>
+        </button>
+    </nav>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
