@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutfitChic - Il Tuo Marketplace di Moda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest/dist/umd/lucide.js">
+    <link rel="stylesheet" href="styles.css?v=202510281728">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="brand-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 12C8 10.8954 8.89543 10 10 10H22C23.1046 10 24 10.8954 24 12V20C24 21.1046 23.1046 22 22 22H10C8.89543 22 8 21.1046 8 20V12Z" fill="#EFCB4B"/>
+                    <path d="M6 8C6 6.89543 6.89543 6 8 6H24C25.1046 6 26 6.89543 26 8V10H6V8Z" fill="#EFCB4B"/>
+                </svg>
+                <span class="brand-text">OutfitChic</span>
+            </div>
+            <p class="app-subtitle">Il Tuo Marketplace di Moda</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="articles-container">
+                <!-- Article Card 1 -->
+                <article class="article-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop&auto=format" alt="Milan Fashion Week">
+                        <div class="image-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="author-section">
+                            <div class="author-info">
+                                <span class="publish-date">15/1/2025</span>
+                            </div>
+                            <span class="category-tag">Fashion</span>
+                        </div>
+                        <h2 class="article-title">Milan Fashion Week: Best Looks</h2>
+                        <p class="article-description">Exploring the latest trends from the runways</p>
+                        <div class="article-stats">
+                            <div class="stat-item">
+                                <i data-lucide="heart"></i>
+                                <span>2,847</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <span>5 min</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop&auto=format" alt="Beauty Products">
+                        <div class="image-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="author-section">
+                            <div class="author-info">
+                                <span class="publish-date">15/1/2025</span>
+                            </div>
+                            <span class="category-tag">Beauty</span>
+                        </div>
+                        <h2 class="article-title">Spring Beauty Trends 2025</h2>
+                        <p class="article-description">Discover the hottest makeup and skincare looks</p>
+                        <div class="article-stats">
+                            <div class="stat-item">
+                                <i data-lucide="heart"></i>
+                                <span>1,523</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <span>7 min</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop&auto=format" alt="Lifestyle">
+                        <div class="image-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="author-section">
+                            <div class="author-info">
+                                <span class="publish-date">14/1/2025</span>
+                            </div>
+                            <span class="category-tag">Lifestyle</span>
+                        </div>
+                        <h2 class="article-title">Minimalist Wardrobe Essentials</h2>
+                        <p class="article-description">Building a capsule wardrobe that lasts</p>
+                        <div class="article-stats">
+                            <div class="stat-item">
+                                <i data-lucide="heart"></i>
+                                <span>3,142</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <span>6 min</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="content-section">
+            <h2 class="section-title">Categorie</h2>
+            <div class="filter-pills">
+                <button class="filter-pill active" data-category="all">
+                    <i data-lucide="grid-3x3"></i>
+                    Tutti
+                </button>
+                <button class="filter-pill" data-category="fashion">
+                    <i data-lucide="shirt"></i>
+                    Fashion
+                </button>
+                <button class="filter-pill" data-category="beauty">
+                    <i data-lucide="smile"></i>
+                    Beauty
+                </button>
+                <button class="filter-pill" data-category="lifestyle">
+                    <i data-lucide="star"></i>
+                    Lifestyle
+                </button>
+            </div>
+            <div class="articles-container">
+                <!-- Categorized articles will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Saved Section -->
+        <section id="saved" class="content-section">
+            <h2 class="section-title">Salvati</h2>
+            <p class="saved-subtitle">1 articoli salvati</p>
+            <div class="articles-container">
+                <!-- Saved Article Card -->
+                <article class="article-card saved-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop&auto=format" alt="Milan Fashion Week">
+                        <div class="image-overlay">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="author-section">
+                            <div class="author-info">
+                                <span class="publish-date">15/1/2025</span>
+                            </div>
+                            <span class="category-tag">Fashion</span>
+                        </div>
+                        <h2 class="article-title">Milan Fashion Week: Best Looks</h2>
+                        <p class="article-description">Exploring the latest trends from the runways</p>
+                        <div class="article-stats">
+                            <div class="stat-item">
+                                <i data-lucide="heart"></i>
+                                <span>2,847</span>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <span>5 min</span>
+                            </div>
+                            <div class="stat-item saved">
+                                <i data-lucide="bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="content-section">
+            <h2 class="section-title">Shop</h2>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=80&h=80&fit=crop&auto=format" alt="Shop Logo" class="profile-avatar">
+                    <h3 class="profile-name">OutfitChic Shop</h3>
+                    <p class="profile-bio">Il tuo marketplace di moda e stile</p>
+                </div>
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <span class="stat-number">2.4K</span>
+                        <span class="stat-label">Prodotti</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="stat-number">15.2K</span>
+                        <span class="stat-label">Vendite</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="stat-number">892</span>
+                        <span class="stat-label">Clienti</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Grid Section -->
+            <div class="shop-products">
+                <h3 class="products-title">Prodotti in evidenza</h3>
+                <div class="products-container">
+                    
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop&auto=format" alt="Abito elegante nero" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Zara</div>
+                            <h3 class="product-name">Abito elegante nero</h3>
+                            <div class="product-price">
+                                <span class="price-current">€89.99</span>
+                                <span class="price-original">€129.99</span>
+                                <span class="price-discount">-30%</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&auto=format" alt="Air Force 1 White" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Nike</div>
+                            <h3 class="product-name">Air Force 1 White</h3>
+                            <div class="product-price">
+                                <span class="price-current">€149.99</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop&auto=format" alt="Jeans skinny blu" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">H&M</div>
+                            <h3 class="product-name">Jeans skinny blu</h3>
+                            <div class="product-price">
+                                <span class="price-current">€39.99</span>
+                                <span class="price-original">€59.99</span>
+                                <span class="price-discount">-33%</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=400&fit=crop&auto=format" alt="Borsa tote in pelle" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Gucci</div>
+                            <h3 class="product-name">Borsa tote in pelle</h3>
+                            <div class="product-price">
+                                <span class="price-current">€1899.99</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop&auto=format" alt="Felpa oversize grigia" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Uniqlo</div>
+                            <h3 class="product-name">Felpa oversize grigia</h3>
+                            <div class="product-price">
+                                <span class="price-current">€24.99</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1566479179817-c7eae0f5e4e2?w=400&h=400&fit=crop&auto=format" alt="T-shirt essentials" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Adidas</div>
+                            <h3 class="product-name">T-shirt essentials</h3>
+                            <div class="product-price">
+                                <span class="price-current">€19.99</span>
+                                <span class="price-original">€29.99</span>
+                                <span class="price-discount">-33%</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1595751865450-3e9bc53e0b46?w=400&h=400&fit=crop&auto=format" alt="Cappotto lunghissimo" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Mango</div>
+                            <h3 class="product-name">Cappotto lunghissimo</h3>
+                            <div class="product-price">
+                                <span class="price-current">€159.99</span>
+                                <span class="price-original">€229.99</span>
+                                <span class="price-discount">-30%</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&auto=format" alt="Jeans 501 Original" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Levi's</div>
+                            <h3 class="product-name">Jeans 501 Original</h3>
+                            <div class="product-price">
+                                <span class="price-current">€89.99</span>
+                                <span class="price-original">€129.99</span>
+                                <span class="price-discount">-31%</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400&h=400&fit=crop&auto=format" alt="Chuck Taylor All Star" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Converse</div>
+                            <h3 class="product-name">Chuck Taylor All Star</h3>
+                            <div class="product-price">
+                                <span class="price-current">€79.99</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1580831408527-17e9e544e4b1?w=400&h=400&fit=crop&auto=format" alt="Trench coat beige" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Cos</div>
+                            <h3 class="product-name">Trench coat beige</h3>
+                            <div class="product-price">
+                                <span class="price-current">€199.99</span>
+                                <span class="price-original">€299.99</span>
+                                <span class="price-discount">-33%</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 11 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?w=400&h=400&fit=crop&auto=format" alt="Bracelet argento" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Pandora</div>
+                            <h3 class="product-name">Bracelet argento</h3>
+                            <div class="product-price">
+                                <span class="price-current">€59.99</span>
+                                <span class="price-original">€79.99</span>
+                                <span class="price-discount">-25%</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 12 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1549298916-11ae07e8c5ef?w=400&h=400&fit=crop&auto=format" alt="Sneakers RS-X" class="product-image">
+                        <button class="product-wishlist">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="product-info">
+                            <div class="product-brand">Puma</div>
+                            <h3 class="product-name">Sneakers RS-X</h3>
+                            <div class="product-price">
+                                <span class="price-current">€129.99</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-add-cart">
+                                    <i data-lucide="shopping-cart"></i>
+                                    <span>Aggiungi al carrello</span>
+                                </button>
+                                <button class="btn-quick-view">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-section="home">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+        </button>
+        <button class="nav-item" data-section="categories">
+            <i data-lucide="grid-3x3"></i>
+            <span>Categories</span>
+        </button>
+        <button class="nav-item" data-section="saved">
+            <i data-lucide="bookmark"></i>
+            <span>Saved</span>
+        </button>
+        <button class="nav-item" data-section="shop">
+            <i data-lucide="shopping-bag"></i>
+            <span>Shop</span>
+        </button>
+    </nav>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js?v=202510281728"></script></script>
+</body>
+</html>
