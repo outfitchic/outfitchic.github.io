@@ -130,10 +130,27 @@ body {
     overflow: hidden;
     transition: transform 0.2s ease-out;
     cursor: pointer;
+    /* Mobile optimizations */
+    min-height: 44px; /* Minimum touch target */
+    touch-action: manipulation; /* Prevents double-tap zoom */
 }
 
 .article-card:hover {
     transform: scale(0.98);
+}
+
+/* Mobile specific article cards */
+@media (max-width: 768px) {
+    .article-card {
+        /* Enhanced touch feedback */
+        transform: scale(1);
+        transition: all 0.2s ease-out;
+    }
+    
+    .article-card:active {
+        transform: scale(0.97);
+        background-color: var(--bg-secondary);
+    }
 }
 
 .card-image {
@@ -512,6 +529,21 @@ body {
     margin: 0 auto;
     padding: 20px;
     display: none;
+    /* Mobile optimizations */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    position: relative;
+    z-index: 100;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+    .article-detail {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        background: white;
+    }
 }
 
 .back-btn {
@@ -524,10 +556,24 @@ body {
     font-size: 14px;
     margin-bottom: 30px;
     transition: background 0.3s;
+    /* Mobile optimizations */
+    min-height: 44px; /* Minimum touch target size */
+    touch-action: manipulation; /* Prevents double-tap zoom */
 }
 
-.back-btn:hover {
+.back-btn:hover, .back-btn:active {
     background: #555;
+}
+
+/* Mobile specific back button */
+@media (max-width: 768px) {
+    .back-btn {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
 }
 
 .article-content {

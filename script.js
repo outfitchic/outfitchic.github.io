@@ -7,11 +7,21 @@ class OutfitChicApp {
     }
 
     init() {
+        console.log(`🚀 Initializing app for mobile...`);
+        
         this.initializeLucideIcons();
         this.setupNavigation();
         this.setupFilters();
         this.loadContent();
         this.addEventListeners();
+        
+        // Re-setup article navigation after content load for mobile
+        setTimeout(() => {
+            console.log(`📱 Re-setting up article navigation for mobile...`);
+            this.setupArticleNavigation();
+        }, 500);
+        
+        console.log(`✅ App initialization complete`);
     }
 
     // Initialize Lucide icons
@@ -480,27 +490,49 @@ class OutfitChicApp {
         this.setActiveFilter('all');
     }
 
-    // Article click handlers
+    // Article click handlers - MOBILE OPTIMIZED
     setupArticleNavigation() {
-        // Handle article card clicks
+        console.log(`📱 Setting up article navigation for mobile...`);
+        
+        // Handle article card clicks - MOBILE COMPATIBLE
         document.querySelectorAll('.article-card').forEach(article => {
+            // Add both click and touch events for mobile
             article.addEventListener('click', (e) => {
                 const articleId = article.dataset.articleId;
-                console.log(`Navigating to article ${articleId}`);
+                console.log(`📱 Click navigation to article ${articleId}`);
+                this.navigateToArticle(articleId);
+            });
+            
+            // Add touch events for mobile
+            article.addEventListener('touchend', (e) => {
+                e.preventDefault(); // Prevent double trigger
+                const articleId = article.dataset.articleId;
+                console.log(`📱 Touch navigation to article ${articleId}`);
                 this.navigateToArticle(articleId);
             });
         });
 
-        // Handle article title clicks specifically
+        // Handle article title clicks specifically - MOBILE COMPATIBLE
         document.querySelectorAll('.article-title').forEach(title => {
             title.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const article = title.closest('.article-card');
                 const articleId = article.dataset.articleId;
-                console.log(`Navigating to article ${articleId} from title`);
+                console.log(`📱 Title click navigation to article ${articleId}`);
+                this.navigateToArticle(articleId);
+            });
+            
+            title.addEventListener('touchend', (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                const article = title.closest('.article-card');
+                const articleId = article.dataset.articleId;
+                console.log(`📱 Title touch navigation to article ${articleId}`);
                 this.navigateToArticle(articleId);
             });
         });
+        
+        console.log(`✅ Article navigation setup complete for mobile`);
     }
 
     // Navigate to specific article (show on same page)
@@ -706,6 +738,8 @@ class OutfitChicApp {
 
     // Add event listeners
     addEventListeners() {
+        console.log(`🔧 Adding event listeners...`);
+        
         // Setup article navigation
         this.setupArticleNavigation();
         
@@ -717,6 +751,33 @@ class OutfitChicApp {
         
         // Add keyboard navigation support
         document.addEventListener('keydown', this.handleKeyboard.bind(this));
+        
+        // FALLBACK: Add global click handler for article cards
+        document.addEventListener('click', (e) => {
+            const articleCard = e.target.closest('.article-card');
+            if (articleCard && !e.target.closest('.article-detail')) {
+                const articleId = articleCard.dataset.articleId;
+                if (articleId) {
+                    console.log(`🔄 Fallback navigation to article ${articleId}`);
+                    this.navigateToArticle(articleId);
+                }
+            }
+        });
+        
+        // FALLBACK: Add global touch handler for mobile
+        document.addEventListener('touchend', (e) => {
+            const articleCard = e.target.closest('.article-card');
+            if (articleCard && !e.target.closest('.article-detail')) {
+                e.preventDefault();
+                const articleId = articleCard.dataset.articleId;
+                if (articleId) {
+                    console.log(`📱 Fallback touch navigation to article ${articleId}`);
+                    this.navigateToArticle(articleId);
+                }
+            }
+        });
+        
+        console.log(`✅ Event listeners added successfully`);
     }
 
     // Handle window resize
@@ -780,6 +841,8 @@ document.head.appendChild(style);
 
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    console.log(`🚀 DOM loaded - initializing OutfitChic app...`);
+    
     // Initialize the OutfitChic app
     window.outfitChicApp = new OutfitChicApp();
     
@@ -806,6 +869,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.article-card').forEach(card => {
             cardObserver.observe(card);
         });
+        
+        // MOBILE: Final setup check
+        setTimeout(() => {
+            console.log(`📱 Mobile setup check...`);
+            const articleCards = document.querySelectorAll('.article-card');
+            console.log(`📋 Found ${articleCards.length} article cards`);
+            
+            articleCards.forEach((card, index) => {
+                console.log(`📄 Card ${index + 1}:`, card.dataset.articleId);
+            });
+            
+            if (window.outfitChicApp) {
+                window.outfitChicApp.setupArticleNavigation();
+                console.log(`✅ Article navigation re-setup for mobile`);
+            }
+        }, 1000);
     });
     
     // Add service worker registration for PWA capabilities (optional)
@@ -817,6 +896,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //     .catch(error => console.log('SW registration failed'));
         });
     }
+    
+    console.log(`✅ OutfitChic app initialization complete`);
 });
 
 // Add global error handling
