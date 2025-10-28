@@ -505,6 +505,8 @@ class OutfitChicApp {
 
     // Navigate to specific article (show on same page)
     navigateToArticle(articleId) {
+        console.log(`🔍 Navigating to article: ${articleId}`);
+        
         const articleContent = {
             'article-1': {
                 title: 'Milan Fashion Week: I Look Più Iconici',
@@ -608,26 +610,38 @@ class OutfitChicApp {
             }
         };
 
+        console.log(`📋 Available articles:`, Object.keys(articleContent));
+        console.log(`🎯 Looking for article: ${articleId}`);
+        console.log(`✅ Article found:`, !!articleContent[articleId]);
+        
         if (articleContent[articleId]) {
+            console.log(`📖 Showing article content...`);
             this.showArticleContent(articleContent[articleId]);
         } else {
-            console.warn(`Article ${articleId} not found`);
+            console.warn(`❌ Article ${articleId} not found`);
+            alert(`Articolo non trovato: ${articleId}`);
         }
     }
 
     // Show article content on current page
     showArticleContent(articleData) {
+        console.log(`🏠 Hiding articles section...`);
+        
         // Hide articles section
         const articlesSection = document.querySelector('#articles');
         if (articlesSection) {
             articlesSection.style.display = 'none';
+            console.log(`✅ Articles section hidden`);
+        } else {
+            console.log(`❌ Articles section not found`);
         }
 
         // Create and show article content
+        console.log(`📦 Creating article container...`);
         const articleContainer = document.querySelector('.article-detail') || this.createArticleContainer();
         
         articleContainer.innerHTML = `
-            <button class="back-btn" onclick="this.hideArticleContent()">← Torna agli Articoli</button>
+            <button class="back-btn">← Torna agli Articoli</button>
             <article class="article-content">
                 <header class="article-header">
                     <h1 class="article-title-detail">${articleData.title}</h1>
@@ -640,22 +654,44 @@ class OutfitChicApp {
             </article>
         `;
         
+        // Add event listener to back button
+        const backBtn = articleContainer.querySelector('.back-btn');
+        if (backBtn) {
+            backBtn.addEventListener('click', () => {
+                console.log(`🔙 Back button clicked`);
+                this.hideArticleContent();
+            });
+        }
+        
         articleContainer.style.display = 'block';
+        console.log(`✅ Article container shown`);
         window.scrollTo(0, 0);
+        console.log(`🔝 Scrolled to top`);
     }
 
     // Hide article content and return to articles
     hideArticleContent() {
+        console.log(`🔄 Hiding article content...`);
+        
         const articleContainer = document.querySelector('.article-detail');
         const articlesSection = document.querySelector('#articles');
         
         if (articleContainer) {
             articleContainer.style.display = 'none';
+            console.log(`✅ Article container hidden`);
+        } else {
+            console.log(`❌ Article container not found`);
         }
+        
         if (articlesSection) {
             articlesSection.style.display = 'block';
+            console.log(`✅ Articles section shown`);
+        } else {
+            console.log(`❌ Articles section not found`);
         }
+        
         window.scrollTo(0, 0);
+        console.log(`🔝 Scrolled to top`);
     }
 
     // Create article container if not exists
