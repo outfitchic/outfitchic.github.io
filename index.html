@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitchic - La tua destinazione per moda, stile e ispirazione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-accent"></div>
+                    <span class="logo-text">Outfitchic</span>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link">Shop</a>
+                    <a href="#" class="nav-link">Categorie</a>
+                    <a href="#" class="nav-link nav-link-sale">Saldi</a>
+                </nav>
+
+                <!-- Right Section -->
+                <div class="header-right">
+                    <!-- Search -->
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Cerca prodotti...">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+
+                    <!-- User Icons -->
+                    <div class="user-icons">
+                        <button class="icon-btn" title="Cerca">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <button class="icon-btn" title="Accedi">Accedi</button>
+                        <button class="icon-btn" title="Wishlist">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </button>
+                        <button class="icon-btn" title="Carrello">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="m1 1 4 4 3.07 7.54a1 1 0 0 0 .93 1.46h9.94a1 1 0 0 0 .93-.46l2.06-4.74-9.06-9.06"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" alt="Nuova Collezione Primavera" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Nuova Collezione Primavera</h1>
+                <p class="hero-subtitle">Scopri i look che definiscono la stagione. Freschezza, colore e stile senza tempo.</p>
+                <button class="btn-primary hero-btn">Scopri la Collezione</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trend del Momento Section -->
+    <section class="trend-section">
+        <div class="container">
+            <h2 class="section-title">Trend del Momento</h2>
+            <div class="cards-scroll">
+                <!-- Product Cards -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Blazer Oversize" class="card-image">
+                    <h3 class="card-title">Blazer Oversize</h3>
+                    <p class="card-price">€129.00</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Jeans a Gamba Larga" class="card-image">
+                    <h3 class="card-title">Jeans a Gamba Larga</h3>
+                    <p class="card-price">€89.00</p>
+                </div>
+
+                <div class="card blog-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Guida allo Stile Streetwear" class="card-image">
+                    <span class="blog-tag">Blog</span>
+                    <h3 class="card-title">Guida allo Stile Streetwear</h3>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Gonne Midi Plissettate" class="card-image">
+                    <h3 class="card-title">Gonne Midi Plissettate</h3>
+                    <p class="card-price">€79.00</p>
+                </div>
+
+                <div class="card blog-card">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="5 Borse Iconiche" class="card-image">
+                    <span class="blog-tag">Blog</span>
+                    <h3 class="card-title">5 Borse Iconiche</h3>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sneakers Chunky" class="card-image">
+                    <h3 class="card-title">Sneakers Chunky</h3>
+                    <p class="card-price">€159.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Esplora il Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Esplora il Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-article">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Trend Alert: Come Abbinare i Colori Pastello" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Trend Alert: Come Abbinare i Colori Pastello</h3>
+                        <p class="blog-description">Scopri i segreti per creare outfit sofisticati con i toni pastello della stagione. Consigli pratici e ispirazioni per ogni occasione.</p>
+                        <button class="btn-primary">Leggi di più</button>
+                    </div>
+                </article>
+
+                <article class="blog-article">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Intervista con uno Stilista Emergente" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Intervista con uno Stilista Emergente</h3>
+                        <p class="blog-description">Conosciamo da vicino i talenti emergenti della moda italiana. Le loro visioni, ispirazioni e progetti per il futuro del fashion.</p>
+                        <button class="btn-primary">Leggi di più</button>
+                    </div>
+                </article>
+
+                <article class="blog-article">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Saldi di Metà Stagione Fino al 50%" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Saldi di Metà Stagione Fino al 50%</h3>
+                        <p class="blog-description">Non perdere l'occasione di aggiornare il guardaroba con i migliori pezzi a prezzi scontati. Dalle tendenze ai classici intramontabili.</p>
+                        <button class="btn-primary">Scopri le Offerte</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand Info -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-accent"></div>
+                        <span class="logo-text">Outfitchic</span>
+                    </div>
+                    <p class="footer-slogan">La tua destinazione per moda, stile e ispirazione.</p>
+                </div>
+
+                <!-- Links Sections -->
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 class="footer-title">SHOP</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Novità</a></li>
+                            <li><a href="#" class="footer-link">Abbigliamento</a></li>
+                            <li><a href="#" class="footer-link">Accessori</a></li>
+                            <li><a href="#" class="footer-link">Saldi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4 class="footer-title">SUPPORTO</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Chi Siamo</a></li>
+                            <li><a href="#" class="footer-link">Contatti</a></li>
+                            <li><a href="#" class="footer-link">Spedizioni e Resi</a></li>
+                            <li><a href="#" class="footer-link">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="footer-section newsletter">
+                        <h4 class="footer-title">ISCRIVITI ALLA NEWSLETTER</h4>
+                        <p class="newsletter-text">Ricevi sconti esclusivi, novità e ispirazioni direttamente nella tua inbox.</p>
+                        <div class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="La tua email">
+                            <button class="btn-primary">Iscriviti</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Outfitchic. Tutti i diritti riservati.</p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-link">Termini di Servizio</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
